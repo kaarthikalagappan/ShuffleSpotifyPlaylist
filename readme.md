@@ -9,9 +9,11 @@ Waking up to the same song every day will drive you nuts.
 So here. Have a separate computer do the shuffling for you.
 
 ## Requirements
+Run `pip3 install -r requirements.txt` to install all of dependencies required for this program.
 
- - [A Spotify application in your developer account with a defined Redirect URI (it doesn't need to resolve)](https://developer.spotify.com/documentation/general/guides/app-settings)
-    - [Add `http://localhost:8080` to the Redirect URI Whitelist under the app settings](https://developer.spotify.com/documentation/general/guides/app-settings/)
+Primary requirements:
+ - A Spotify application in your developer account with a defined Redirect URI (it doesn't need to resolve). [Spotify Documentation](https://developer.spotify.com/documentation/general/guides/app-settings/)
+    - Add `http://localhost:8080` to the Redirect URI Whitelist under the app settings
  - Python 3.x
  - [Spotipy](https://github.com/plamere/spotipy)
 
