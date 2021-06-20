@@ -57,3 +57,5 @@ for song in playlistContents['items']:
 random.shuffle(songIDList)
 
 spotify.playlist_replace_items(playlistURI, songIDList)
+
+print("Shuffled the \"" + results['items'][playlist_to_shuffle-1]['name'] + "\" playlist.")
