@@ -2,7 +2,7 @@ from os import path
 import random
 import spotipy
 import configparser
-import scheduled_job
+import shuffle_playlist
 
 # cache the authorization token to avoid authorizing everytime
 scriptPath = path.dirname(path.realpath(__file__))
@@ -47,7 +47,7 @@ while (playlist_to_shuffle is (not playlist_to_shuffle.isdigit())) \
 playlist_to_shuffle = int(playlist_to_shuffle)
 playlistURI = results['items'][playlist_to_shuffle-1]['uri']
 
-# calling the function in scheduled_job to shuffle the paylist
-scheduled_job.shufflePlaylist(playlistURI, spotify)
+# calling the function in shuffle_playlist to shuffle the paylist
+shuffle_playlist.shufflePlaylist(playlistURI, spotify)
 
 print("Shuffled the \"" + results['items'][playlist_to_shuffle-1]['name'] + "\" playlist.")
