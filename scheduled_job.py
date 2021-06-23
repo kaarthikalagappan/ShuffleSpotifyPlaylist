@@ -35,7 +35,6 @@ def shufflePlaylist(playlistURI):
         exit(1)
 
     songIDList = []
-    playlistURI = "spotify:playlist:6cDcezvYjrKXi8B7UIJLaP"
 
     # retrieve all tracks in the playlist
     playlistContents = spotify.playlist_items(playlistURI)
@@ -46,3 +45,8 @@ def shufflePlaylist(playlistURI):
     random.shuffle(songIDList)
 
     spotify.playlist_replace_items(playlistURI, songIDList)
+
+
+if __name__ == "__main__":
+    import sys
+    shufflePlaylist(str(sys.argv[1]))
