@@ -5,6 +5,8 @@ import configparser
 
 
 def shufflePlaylist(playlistURI, spotify_client = None):
+    # if already created spotify client is passed, then check if
+    # the authorization cache exists
     if spotify_client == None:
         # getting the default cache path (from spotshuffle)
         scriptPath = path.dirname(path.realpath(__file__))
