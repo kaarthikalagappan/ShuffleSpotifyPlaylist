@@ -30,7 +30,8 @@ def shufflePlaylist(playlistURI, spotify_client = None):
                     client_secret=config.get('APPDATA', 'CLIENT_SECRET'),
                     redirect_uri=config.get('APPDATA', 'REDIRECT_URI'),
                     scope=scope,
-                    cache_path=cachePath
+                    cache_path=cachePath,
+                    open_browser=False
                 )
             )
         except spotipy.oauth2.SpotifyOauthError:
